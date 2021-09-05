@@ -43,6 +43,8 @@ namespace login
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -120,7 +122,7 @@ namespace login
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(501, 197);
+            this.label4.Location = new System.Drawing.Point(501, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 26);
             this.label4.TabIndex = 7;
@@ -131,7 +133,7 @@ namespace login
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(501, 235);
+            this.label5.Location = new System.Drawing.Point(502, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(228, 27);
             this.label5.TabIndex = 8;
@@ -141,7 +143,7 @@ namespace login
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(501, 262);
+            this.label6.Location = new System.Drawing.Point(502, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 27);
             this.label6.TabIndex = 9;
@@ -152,7 +154,7 @@ namespace login
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(501, 311);
+            this.label7.Location = new System.Drawing.Point(501, 305);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 27);
             this.label7.TabIndex = 10;
@@ -164,7 +166,7 @@ namespace login
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(501, 338);
+            this.label8.Location = new System.Drawing.Point(501, 332);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 27);
             this.label8.TabIndex = 11;
@@ -189,7 +191,29 @@ namespace login
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(144, 27);
             this.label10.TabIndex = 13;
-            this.label10.Text = "1CR17CS184";
+            this.label10.Text = "1CR17CS183";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(502, 242);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(200, 27);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Fathima Zehera K I";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(502, 269);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(144, 27);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "1CR18CS061";
             // 
             // Form1
             // 
@@ -197,6 +221,8 @@ namespace login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(741, 465);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -235,6 +261,8 @@ namespace login
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 

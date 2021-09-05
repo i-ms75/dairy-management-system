@@ -25,14 +25,14 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form6 f6 = new Form6();
-            f6.Show();
+            /*Form6 f6 = new Form6();
+            f6.Show();*/
 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           /* this.Hide();*/
         }
     }
 }

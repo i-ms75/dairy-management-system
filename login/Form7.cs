@@ -41,5 +41,12 @@ namespace login
             Form9 f9 = new Form9();
             f9.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form10 f10 = new Form10();
+            f10.Show();
+            this.Hide();
+        }
     }
 }

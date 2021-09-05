@@ -13,6 +13,10 @@ namespace login
 {
     public partial class Form1 : Form
     {
+        string user, pass;
+       //133
+       
+       
         public Form1()
         {
             InitializeComponent();
@@ -25,33 +29,50 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string user,pass;
-            user = username.Text;
-            pass = textBox2.Text;
-          /*  if (user == "" || pass == "")
+            string MySQLConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=dairysystem";
 
-                MessageBox.Show("username and passord cannot be empty");
-
-            else
+            MySqlConnection databaseConnection = new MySqlConnection(MySQLConnectionString);
+            databaseConnection.Open();
+            MySqlCommand commandDatabase = new MySqlCommand("select username,password from staffs where username= '" + username.Text + "'", databaseConnection);
             {
-
-                if (user == "Admin" && pass == "Admin")
+                //MessageBox.Show("retriving");
+                var reader = commandDatabase.ExecuteReader();
+                while (reader.Read())
                 {
-                    MessageBox.Show("logged in successfully");
+                    int i;
+                    i = 0;
+
+                    var name = reader.GetString(i);
+                    user = name;
+                    //MessageBox.Show(user);
+                    i++;
+                    pass = reader.GetString(i);
+                    
+                    if (name == null ||username.Text==null || textBox2.Text==null)
+                        MessageBox.Show("enter a valid user creditential");
+                }
+                
+               /* if (username.Text == null || textBox2.Text == null)
+                        MessageBox.Show("enter a valid user creditential");*/
+
+                if (username.Text==user && textBox2.Text==pass)
+                    {
                     this.Hide();
                     Form2 f2 = new Form2();
-                    f2.Show();
-
-                }
+                    f2.Show(); 
+                     }
+                else if(username.Text == "" || textBox2.Text == "")
+                    {
+                        MessageBox.Show("user creditentials cannot be empty");
+                    }
                 else
                 {
-                    MessageBox.Show("incorrect username or password");
+                    MessageBox.Show("Enter valid user creditentials");
                 }
-            }*/
-            MessageBox.Show("logged in successfully");
-            this.Hide();
-            Form2 f2 = new Form2();
-            f2.Show();
+                commandDatabase.CommandTimeout = 60;
+                databaseConnection.Close();
+
+            }
 
         }
 

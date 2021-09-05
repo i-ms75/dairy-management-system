@@ -7,40 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
-
 
 namespace login
 {
-    public partial class Form8 : Form
+    public partial class Form10 : Form
     {
-        public Form8()
+        public Form10()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Form10_Load(object sender, EventArgs e)
         {
-            this.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*runQuery();*/
             string MySQLConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=dairysystem";
-            
+
             MySqlConnection databaseConnection = new MySqlConnection(MySQLConnectionString);
             databaseConnection.Open();
-            MySqlCommand commandDatabase = new MySqlCommand("insert into farmer(name,address,phone) values('"+textBox1.Text+"','"+textBox3.Text+"','"+textBox4.Text+"')", databaseConnection);
-            
+            int id = Convert.ToInt32(ID.Text);
+            MySqlCommand commandDatabase = new MySqlCommand("UPDATE farmer SET name ='"+name.Text+"',address = '"+address.Text+"',phone = '"+phone.Text+"' WHERE id= '"+id+ "'", databaseConnection);
             commandDatabase.ExecuteNonQuery();
-            MessageBox.Show("farmer added to the database");
+            MessageBox.Show("Farmer updated");
             this.Hide();
             commandDatabase.CommandTimeout = 60;
             databaseConnection.Close();
-        }
-       
 
+        }
     }
 }

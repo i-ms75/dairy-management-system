@@ -71,5 +71,17 @@ namespace login
             Form7 f7 = new Form7();            
             f7.Show();
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form11 f11 = new Form11();
+            f11.Show();
+            /*this.Hide();*/
+        }
     }
 }
